@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "e6746cbc-65cf-4504-936e-930d819f5217",
+		"name": "00ISSUE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Sample endpoint: Returns details about a particular user",
+					"id": "1a550e09-f704-483f-9777-f3524e2f952b",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user?id=2604699",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2604699",
+									"description": "(Required) ID of the user"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "e33ac87f-0614-42a1-be21-7f777e099334",
+							"name": "Sample response: Details about a user by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/user?id=2604699",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2604699"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"disabled": true,
+									"description": "A link to the next page of responses",
+									"key": "x-next",
+									"value": "sunt Lorem"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"id\": -61480439,\n  \"name\": \"pariatur eiusmod veniam\",\n  \"tag\": \"anim occaecat aute aliqua\"\n}"
+						},
+						{
+							"id": "9ff753d0-b6d9-4767-9250-a873f47b71ac",
+							"name": "Unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/user?id=2604699",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2604699"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": -41793122,\n  \"message\": \"tempor enim in\"\n}"
+						}
+					]
+				}
+			],
+			"id": "c084a52e-f7eb-4649-8694-3d16e9adeb7d"
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "<Basic Auth Username>",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "<Basic Auth Password>",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "8f124fc3-b7f0-4d0e-b9ec-36f807c2c3f4",
+			"key": "baseUrl",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
