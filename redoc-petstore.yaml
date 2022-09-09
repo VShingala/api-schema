@@ -76,7 +76,6 @@ paths:
           format: int64
     post:
       description: Add new pet to the store inventory.
-      operationId: addPet
       responses:
         '405':
           description: Invalid input
