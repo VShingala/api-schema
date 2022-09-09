@@ -115,9 +115,7 @@ paths:
       requestBody:
         $ref: '#/components/requestBodies/Pet'
     put:
-      summary: Update an existing pet
       description: ''
-      operationId: updatePet
       responses:
         '400':
           description: Invalid ID supplied
